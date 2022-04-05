@@ -11,9 +11,9 @@ import { TokenCredentialAuthenticationProvider } from
 
 import { AppSettings } from './appSettings';
 
-var _settings: AppSettings | undefined = undefined;
-var _deviceCodeCredential: DeviceCodeCredential | undefined = undefined;
-var _userClient: Client | undefined = undefined;
+let _settings: AppSettings | undefined = undefined;
+let _deviceCodeCredential: DeviceCodeCredential | undefined = undefined;
+let _userClient: Client | undefined = undefined;
 
 export function initializeGraphForUserAuth(settings: AppSettings, deviceCodePrompt: DeviceCodePromptCallback) {
   // Ensure settings isn't null
@@ -119,8 +119,8 @@ export async function sendMailAsync(subject: string, body: string, recipient: st
 // </SendMailSnippet>
 
 // <AppOnyAuthConfigSnippet>
-var _clientSecretCredential: ClientSecretCredential | undefined = undefined;
-var _appClient: Client | undefined = undefined;
+let _clientSecretCredential: ClientSecretCredential | undefined = undefined;
+let _appClient: Client | undefined = undefined;
 
 function ensureGraphForAppOnlyAuth() {
   // Ensure settings isn't null

@@ -12,7 +12,7 @@ import * as graphHelper from './graphHelper';
 async function main() {
   console.log('TypeScript Graph Tutorial');
 
-  var choice = 0;
+  let choice = 0;
 
   // Initialize Graph
   initializeGraph(settings);
@@ -109,7 +109,7 @@ async function listInboxAsync() {
     const messages: Message[] = messagePage.value;
 
     // Output each message's details
-    for (var message of messages) {
+    for (const message of messages) {
       console.log(`Message: ${message.subject ?? 'NO SUBJECT'}`);
       console.log(`  From: ${message.from?.emailAddress?.name ?? 'UNKNOWN'}`);
       console.log(`  Status: ${message.isRead ? 'Read' : 'Unread'}`);
@@ -155,7 +155,7 @@ async function listUsersAsync() {
     const users: User[] = userPage.value;
 
     // Output each user's details
-    for (var user of users) {
+    for (const user of users) {
       console.log(`User: ${user.displayName ?? "NO NAME"}`);
       console.log(`  ID: ${user.id}`);
       console.log(`  Email: ${user.mail ?? "NO EMAIL"}`);
