@@ -116,7 +116,7 @@ To use PowerShell, you'll need the Microsoft Graph PowerShell SDK. If you do not
 
 ## Build and run the sample
 
-In your command-line interface (CLI), navigate to the project directory and run the following commands.
+In your command-line interface (CLI), navigate to the project directory and run the following command.
 
 ```Shell
 npx ts-node index.ts
