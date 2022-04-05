@@ -1,5 +1,7 @@
 # Build TypeScript apps with Microsoft Graph - Completed project
 
+[![Node.js](https://github.com/microsoftgraph/msgraph-training-typescript/actions/workflows/nodejs.yml/badge.svg)](https://github.com/microsoftgraph/msgraph-training-typescript/actions/workflows/nodejs.yml)
+
 This sample will introduce you to working with the Microsoft Graph SDK to access data in Microsoft 365 from .NET applications. This code is the result of completing the [TypeScript Microsoft Graph tutorial](https://docs.microsoft.com/graph/tutorials/dotnet).
 
 ## Running the sample
