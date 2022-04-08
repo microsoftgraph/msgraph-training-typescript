@@ -135,7 +135,7 @@ async function sendMailAsync() {
     const userEmail = user?.mail ?? user?.userPrincipalName;
 
     if (!userEmail) {
-      console.log("Couldn't get your email address, canceling...");
+      console.log('Couldn\'t get your email address, canceling...');
       return;
     }
 
@@ -156,9 +156,9 @@ async function listUsersAsync() {
 
     // Output each user's details
     for (const user of users) {
-      console.log(`User: ${user.displayName ?? "NO NAME"}`);
+      console.log(`User: ${user.displayName ?? 'NO NAME'}`);
       console.log(`  ID: ${user.id}`);
-      console.log(`  Email: ${user.mail ?? "NO EMAIL"}`);
+      console.log(`  Email: ${user.mail ?? 'NO EMAIL'}`);
     }
 
     // If @odata.nextLink is not undefined, there are more users

@@ -72,8 +72,7 @@ export async function getUserAsync(): Promise<User> {
 // </GetUserSnippet>
 
 // <GetInboxSnippet>
-export async function getInboxAsync(): Promise<PageCollection>
-{
+export async function getInboxAsync(): Promise<PageCollection> {
   // Ensure client isn't undefined
   if (!_userClient) {
     throw new Error('Graph has not been initialized for user auth');

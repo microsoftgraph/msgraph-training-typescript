@@ -11,7 +11,7 @@ const settings: AppSettings = {
     'mail.read',
     'mail.send'
   ]
-}
+};
 
 export interface AppSettings {
   clientId: string;
