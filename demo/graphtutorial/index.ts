@@ -2,9 +2,9 @@
 // Licensed under the MIT license.
 
 // <ProgramSnippet>
+import * as readline from 'readline-sync';
 import { DeviceCodeInfo } from '@azure/identity';
 import { Message, User } from '@microsoft/microsoft-graph-types';
-import * as readline from 'readline-sync';
 
 import settings, { AppSettings } from './appSettings';
 import * as graphHelper from './graphHelper';
