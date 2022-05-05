@@ -1,0 +1,7 @@
+{
+    "sourceDirectory": "./demo",
+    "exampleConfigFile": "./graphtutorial/appSettings.example.ts",
+    "configFile": "appSettings.ts",
+    "archiveFile": "TypeScriptQuickStart.zip",
+    "zipReadMe": "./README.md"
+}

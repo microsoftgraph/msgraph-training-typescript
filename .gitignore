@@ -105,3 +105,4 @@ dist
 
 appSettings.ts
 build/
+*.zip
