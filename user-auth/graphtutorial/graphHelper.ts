@@ -3,7 +3,7 @@
 
 // <UserAuthConfigSnippet>
 import 'isomorphic-fetch';
-import { ClientSecretCredential, DeviceCodeCredential, DeviceCodePromptCallback } from '@azure/identity';
+import { DeviceCodeCredential, DeviceCodePromptCallback } from '@azure/identity';
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
 import { User, Message } from '@microsoft/microsoft-graph-types';
 import { TokenCredentialAuthenticationProvider } from
@@ -117,55 +117,10 @@ export async function sendMailAsync(subject: string, body: string, recipient: st
 }
 // </SendMailSnippet>
 
-// <AppOnyAuthConfigSnippet>
-let _clientSecretCredential: ClientSecretCredential | undefined = undefined;
-let _appClient: Client | undefined = undefined;
-
-function ensureGraphForAppOnlyAuth() {
-  // Ensure settings isn't null
-  if (!_settings) {
-    throw new Error('Settings cannot be undefined');
-  }
-
-  if (!_clientSecretCredential) {
-    _clientSecretCredential = new ClientSecretCredential(
-      _settings.tenantId,
-      _settings.clientId,
-      _settings.clientSecret
-    );
-  }
-
-  if (!_appClient) {
-    const authProvider = new TokenCredentialAuthenticationProvider(_clientSecretCredential, {
-      scopes: [ 'https://graph.microsoft.com/.default' ]
-    });
-
-    _appClient = Client.initWithMiddleware({
-      authProvider: authProvider
-    });
-  }
-}
-// </AppOnyAuthConfigSnippet>
-
-// <GetUsersSnippet>
-export async function getUsersAsync(): Promise<PageCollection> {
-  ensureGraphForAppOnlyAuth();
-
-  return _appClient?.api('/users')
-    .select(['displayName', 'id', 'mail'])
-    .top(25)
-    .orderby('displayName')
-    .get();
-}
-// </GetUsersSnippet>
-
 // <MakeGraphCallSnippet>
 // This function serves as a playground for testing Graph snippets
 // or other code
 export async function makeGraphCallAsync() {
   // INSERT YOUR CODE HERE
-  // Note: if using _appClient, be sure to call ensureGraphForAppOnlyAuth
-  // before using it.
-  // ensureGraphForAppOnlyAuth();
 }
 // </MakeGraphCallSnippet>
