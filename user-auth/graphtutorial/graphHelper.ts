@@ -25,7 +25,7 @@ export function initializeGraphForUserAuth(settings: AppSettings, deviceCodeProm
 
   _deviceCodeCredential = new DeviceCodeCredential({
     clientId: settings.clientId,
-    tenantId: settings.authTenant,
+    tenantId: settings.tenantId,
     userPromptCallback: deviceCodePrompt
   });
 
