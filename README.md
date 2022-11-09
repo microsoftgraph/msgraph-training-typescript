@@ -2,11 +2,13 @@
 
 [![Node.js](https://github.com/microsoftgraph/msgraph-training-typescript/actions/workflows/nodejs.yml/badge.svg)](https://github.com/microsoftgraph/msgraph-training-typescript/actions/workflows/nodejs.yml)
 
-This sample will introduce you to working with the Microsoft Graph SDK to access data in Microsoft 365 from .NET applications. This code is the result of completing the [TypeScript Microsoft Graph tutorial](https://docs.microsoft.com/graph/tutorials/typescript).
+This sample will introduce you to working with the Microsoft Graph SDK to access data in Microsoft 365 from .NET applications. This code is the result of completing the [TypeScript Microsoft Graph tutorial](https://docs.microsoft.com/graph/tutorials/typescript) and the [TypeScript Microsoft Graph app-only tutorial](https://docs.microsoft.com/graph/tutorials/typescript-app-only).
 
 ## Running the sample
 
-The code for this sample is in the [demo](demo) folder. Instructions to configure and run the sample can be found in the [README](demo/README.md) in that folder.
+The code for the delegated user authentication sample is in the [user-auth](user-auth) folder. Instructions to configure and run the sample can be found in the [README](user-auth/README.md) in that folder.
+
+The code for the app-only authentication sample is in the [app-auth](app-auth) folder. Instructions to configure and run the sample can be found in the [README](app-auth/README.md) in that folder.
 
 ## Code of conduct
 
