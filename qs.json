@@ -1,5 +1,5 @@
 {
-    "sourceDirectory": "./demo",
+    "sourceDirectory": "./user-auth",
     "exampleConfigFile": "./graphtutorial/appSettings.example.ts",
     "configFile": "appSettings.ts",
     "archiveFile": "TypeScriptQuickStart.zip",
