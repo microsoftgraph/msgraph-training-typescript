@@ -4,7 +4,7 @@
 // <ProgramSnippet>
 import * as readline from 'readline-sync';
 import { DeviceCodeInfo } from '@azure/identity';
-import { Message, User } from '@microsoft/microsoft-graph-types';
+import { Message } from '@microsoft/microsoft-graph-types';
 
 import settings, { AppSettings } from './appSettings';
 import * as graphHelper from './graphHelper';
