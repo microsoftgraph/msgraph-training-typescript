@@ -2,7 +2,7 @@
 
 [![Node.js](https://github.com/microsoftgraph/msgraph-training-typescript/actions/workflows/nodejs.yml/badge.svg)](https://github.com/microsoftgraph/msgraph-training-typescript/actions/workflows/nodejs.yml) ![License.](https://img.shields.io/badge/license-MIT-green.svg)
 
-This sample will introduce you to working with the Microsoft Graph SDK to access data in Microsoft 365 from .NET applications. This code is the result of completing the [TypeScript Microsoft Graph tutorial](https://docs.microsoft.com/graph/tutorials/typescript) and the [TypeScript Microsoft Graph app-only tutorial](https://docs.microsoft.com/graph/tutorials/typescript-app-only).
+This sample will introduce you to working with the Microsoft Graph SDK to access data in Microsoft 365 from .NET applications. This code is the result of completing the [TypeScript Microsoft Graph tutorial](https://learn.microsoft.com/graph/tutorials/typescript) and the [TypeScript Microsoft Graph app-only tutorial](https://learn.microsoft.com/graph/tutorials/typescript-app-only).
 
 ## Running the sample
 
