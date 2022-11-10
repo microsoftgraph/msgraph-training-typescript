@@ -15,4 +15,4 @@ export interface AppSettings {
 }
 
 export default settings;
-// <SettingsSnippet>
+// </SettingsSnippet>
