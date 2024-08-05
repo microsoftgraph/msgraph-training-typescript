@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,14 +13,14 @@
   "devDependencies": {
     "@microsoft/microsoft-graph-types": "^2.40.0",
     "@types/isomorphic-fetch": "^0.0.39",
-    "@types/node": "^20.14.11",
+    "@types/node": "^20.14.14",
     "@types/readline-sync": "^1.4.8",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-import": "^2.29.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.8.0",
+    "eslint-plugin-import-x": "^3.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-promise": "^7.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },
