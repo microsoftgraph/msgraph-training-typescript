@@ -1,10 +1,11 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
 // <AppOnlyAuthConfigSnippet>
 import 'isomorphic-fetch';
 import { ClientSecretCredential } from '@azure/identity';
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
+// prettier-ignore
 import { TokenCredentialAuthenticationProvider } from
   '@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials';
 
@@ -26,17 +27,20 @@ export function initializeGraphForAppOnlyAuth(settings: AppSettings) {
     _clientSecretCredential = new ClientSecretCredential(
       _settings.tenantId,
       _settings.clientId,
-      _settings.clientSecret
+      _settings.clientSecret,
     );
   }
 
   if (!_appClient) {
-    const authProvider = new TokenCredentialAuthenticationProvider(_clientSecretCredential, {
-      scopes: [ 'https://graph.microsoft.com/.default' ]
-    });
+    const authProvider = new TokenCredentialAuthenticationProvider(
+      _clientSecretCredential,
+      {
+        scopes: ['https://graph.microsoft.com/.default'],
+      },
+    );
 
     _appClient = Client.initWithMiddleware({
-      authProvider: authProvider
+      authProvider: authProvider,
     });
   }
 }
@@ -51,7 +55,7 @@ export async function getAppOnlyTokenAsync(): Promise<string> {
 
   // Request token with given scopes
   const response = await _clientSecretCredential.getToken([
-    'https://graph.microsoft.com/.default'
+    'https://graph.microsoft.com/.default',
   ]);
   return response.token;
 }
@@ -64,7 +68,8 @@ export async function getUsersAsync(): Promise<PageCollection> {
     throw new Error('Graph has not been initialized for app-only auth');
   }
 
-  return _appClient?.api('/users')
+  return _appClient
+    ?.api('/users')
     .select(['displayName', 'id', 'mail'])
     .top(25)
     .orderby('displayName')
