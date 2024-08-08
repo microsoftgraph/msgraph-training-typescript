@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
 // <ProgramSnippet>
@@ -16,14 +16,12 @@ async function main() {
   // Initialize Graph
   initializeGraph(settings);
 
-  const choices = [
-    'Display access token',
-    'List users',
-    'Make a Graph call'
-  ];
+  const choices = ['Display access token', 'List users', 'Make a Graph call'];
 
   while (choice != -1) {
-    choice = readline.keyInSelect(choices, 'Select an option', { cancel: 'Exit' });
+    choice = readline.keyInSelect(choices, 'Select an option', {
+      cancel: 'Exit',
+    });
 
     switch (choice) {
       case -1:

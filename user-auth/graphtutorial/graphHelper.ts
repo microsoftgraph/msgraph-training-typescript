@@ -1,11 +1,15 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
 // <UserAuthConfigSnippet>
 import 'isomorphic-fetch';
-import { DeviceCodeCredential, DeviceCodePromptCallback } from '@azure/identity';
+import {
+  DeviceCodeCredential,
+  DeviceCodePromptCallback,
+} from '@azure/identity';
 import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
 import { User, Message } from '@microsoft/microsoft-graph-types';
+// prettier-ignore
 import { TokenCredentialAuthenticationProvider } from
   '@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials';
 
@@ -15,7 +19,10 @@ let _settings: AppSettings | undefined = undefined;
 let _deviceCodeCredential: DeviceCodeCredential | undefined = undefined;
 let _userClient: Client | undefined = undefined;
 
-export function initializeGraphForUserAuth(settings: AppSettings, deviceCodePrompt: DeviceCodePromptCallback) {
+export function initializeGraphForUserAuth(
+  settings: AppSettings,
+  deviceCodePrompt: DeviceCodePromptCallback,
+) {
   // Ensure settings isn't null
   if (!settings) {
     throw new Error('Settings cannot be undefined');
@@ -26,15 +33,18 @@ export function initializeGraphForUserAuth(settings: AppSettings, deviceCodeProm
   _deviceCodeCredential = new DeviceCodeCredential({
     clientId: settings.clientId,
     tenantId: settings.tenantId,
-    userPromptCallback: deviceCodePrompt
+    userPromptCallback: deviceCodePrompt,
   });
 
-  const authProvider = new TokenCredentialAuthenticationProvider(_deviceCodeCredential, {
-    scopes: settings.graphUserScopes
-  });
+  const authProvider = new TokenCredentialAuthenticationProvider(
+    _deviceCodeCredential,
+    {
+      scopes: settings.graphUserScopes,
+    },
+  );
 
   _userClient = Client.initWithMiddleware({
-    authProvider: authProvider
+    authProvider: authProvider,
   });
 }
 // </UserAuthConfigSnippet>
@@ -52,7 +62,9 @@ export async function getUserTokenAsync(): Promise<string> {
   }
 
   // Request token with given scopes
-  const response = await _deviceCodeCredential.getToken(_settings?.graphUserScopes);
+  const response = await _deviceCodeCredential.getToken(
+    _settings?.graphUserScopes,
+  );
   return response.token;
 }
 // </GetUserTokenSnippet>
@@ -64,8 +76,9 @@ export async function getUserAsync(): Promise<User> {
     throw new Error('Graph has not been initialized for user auth');
   }
 
-  return _userClient.api('/me')
-    // Only request specific properties
+  // Only request specific properties with .select()
+  return _userClient
+    .api('/me')
     .select(['displayName', 'mail', 'userPrincipalName'])
     .get();
 }
@@ -78,7 +91,8 @@ export async function getInboxAsync(): Promise<PageCollection> {
     throw new Error('Graph has not been initialized for user auth');
   }
 
-  return _userClient.api('/me/mailFolders/inbox/messages')
+  return _userClient
+    .api('/me/mailFolders/inbox/messages')
     .select(['from', 'isRead', 'receivedDateTime', 'subject'])
     .top(25)
     .orderby('receivedDateTime DESC')
@@ -87,7 +101,11 @@ export async function getInboxAsync(): Promise<PageCollection> {
 // </GetInboxSnippet>
 
 // <SendMailSnippet>
-export async function sendMailAsync(subject: string, body: string, recipient: string) {
+export async function sendMailAsync(
+  subject: string,
+  body: string,
+  recipient: string,
+) {
   // Ensure client isn't undefined
   if (!_userClient) {
     throw new Error('Graph has not been initialized for user auth');
@@ -98,22 +116,19 @@ export async function sendMailAsync(subject: string, body: string, recipient: st
     subject: subject,
     body: {
       content: body,
-      contentType: 'text'
+      contentType: 'text',
     },
     toRecipients: [
       {
         emailAddress: {
-          address: recipient
-        }
-      }
-    ]
+          address: recipient,
+        },
+      },
+    ],
   };
 
   // Send the message
-  return _userClient.api('me/sendMail')
-    .post({
-      message: message
-    });
+  return _userClient.api('me/sendMail').post({ message: message });
 }
 // </SendMailSnippet>
 

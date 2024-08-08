@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
 // <ProgramSnippet>
@@ -24,11 +24,13 @@ async function main() {
     'Display access token',
     'List my inbox',
     'Send mail',
-    'Make a Graph call'
+    'Make a Graph call',
   ];
 
   while (choice != -1) {
-    choice = readline.keyInSelect(choices, 'Select an option', { cancel: 'Exit' });
+    choice = readline.keyInSelect(choices, 'Select an option', {
+      cancel: 'Exit',
+    });
 
     switch (choice) {
       case -1:
@@ -130,12 +132,15 @@ async function sendMailAsync() {
     const userEmail = user?.mail ?? user?.userPrincipalName;
 
     if (!userEmail) {
-      console.log('Couldn\'t get your email address, canceling...');
+      console.log("Couldn't get your email address, canceling...");
       return;
     }
 
-    await graphHelper.sendMailAsync('Testing Microsoft Graph',
-      'Hello world!', userEmail);
+    await graphHelper.sendMailAsync(
+      'Testing Microsoft Graph',
+      'Hello world!',
+      userEmail,
+    );
     console.log('Mail sent.');
   } catch (err) {
     console.log(`Error sending mail: ${err}`);

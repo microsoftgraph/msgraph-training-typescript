@@ -1,6 +1,7 @@
 {
   "name": "graphtutorial",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "build/index.js",
   "scripts": {
@@ -15,12 +16,13 @@
     "@types/isomorphic-fetch": "^0.0.39",
     "@types/node": "^20.14.14",
     "@types/readline-sync": "^1.4.8",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
     "eslint": "^9.8.0",
-    "eslint-plugin-import-x": "^3.1.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^7.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-header": "^3.1.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },
