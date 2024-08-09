@@ -1,0 +1,46 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch user auth sample",
+      "preLaunchTask": "tsc: build user-auth",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/user-auth/graphtutorial/build/index.js",
+      "cwd": "${workspaceFolder}/user-auth/graphtutorial",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "outFiles": [
+        "${workspaceFolder}/user-auth/graphtutorial/build/**/*.js"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch app auth sample",
+      "preLaunchTask": "tsc: build app-auth",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/app-auth/graphapponlytutorial/build/index.js",
+      "cwd": "${workspaceFolder}/app-auth/graphapponlytutorial",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "outFiles": [
+        "${workspaceFolder}/app-auth/graphapponlytutorial/build/**/*.js"
+      ]
+    }
+  ]
+}
