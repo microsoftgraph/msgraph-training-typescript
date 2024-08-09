@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "typescript",
+      "tsconfig": "user-auth/graphtutorial/tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build"
+      },
+      "label": "tsc: build user-auth"
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "app-auth/graphapponlytutorial/tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build"
+      },
+      "label": "tsc: build app-auth"
+    }
+  ]
+}

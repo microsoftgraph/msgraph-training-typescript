@@ -5,7 +5,6 @@ import globals from 'globals';
 import js from '@eslint/js';
 import tsParser from '@typescript-eslint/parser';
 import eslintTypeScript from '@typescript-eslint/eslint-plugin';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import header from 'eslint-plugin-header';
 header.rules.header.meta.schema = false;
@@ -17,7 +16,7 @@ export default [
   js.configs.recommended,
   eslintPrettierRecommended,
   {
-    files: ['**.{ts,js}'],
+    files: ['**.{ts,mjs}'],
 
     languageOptions: {
       globals: {
@@ -32,7 +31,6 @@ export default [
     plugins: {
       eslintTypeScript,
       header,
-      eslintPluginPrettier,
     },
 
     rules: {
