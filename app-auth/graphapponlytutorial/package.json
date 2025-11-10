@@ -15,7 +15,7 @@
     "@types/isomorphic-fetch": "^0.0.39",
     "@types/node": "^24.10.0",
     "@types/readline-sync": "^1.4.8",
-    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
     "@typescript-eslint/parser": "^8.46.2",
     "eslint": "^9.39.0",
     "eslint-config-prettier": "^10.1.8",
