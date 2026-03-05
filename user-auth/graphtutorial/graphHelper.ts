@@ -11,9 +11,9 @@ import { Client, PageCollection } from '@microsoft/microsoft-graph-client';
 import { User, Message } from '@microsoft/microsoft-graph-types';
 // prettier-ignore
 import { TokenCredentialAuthenticationProvider } from
-  '@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials';
+  '@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials/index.js';
 
-import { AppSettings } from './appSettings';
+import { AppSettings } from './appSettings.js';
 
 let _settings: AppSettings | undefined = undefined;
 let _deviceCodeCredential: DeviceCodeCredential | undefined = undefined;

@@ -6,8 +6,8 @@ import * as readline from 'readline-sync';
 import { DeviceCodeInfo } from '@azure/identity';
 import { Message } from '@microsoft/microsoft-graph-types';
 
-import settings, { AppSettings } from './appSettings';
-import * as graphHelper from './graphHelper';
+import settings, { AppSettings } from './appSettings.js';
+import * as graphHelper from './graphHelper.js';
 
 async function main() {
   console.log('TypeScript Graph Tutorial');

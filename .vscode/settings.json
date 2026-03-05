@@ -1,9 +1,15 @@
 {
-    "cSpell.ignoreWords": [
-        "graphtutorial",
-        "odata"
-    ],
-    "cSpell.words": [
-        "graphapponlytutorial"
-    ]
+  "cSpell.ignoreWords": [
+    "graphapponlytutorial",
+    "graphtutorial",
+    "odata"
+  ],
+  "cSpell.overrides": [
+    {
+      "filename": "package.json",
+      "ignoreWords": [
+        "ganchev"
+      ]
+    }
+  ]
 }
