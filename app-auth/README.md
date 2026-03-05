@@ -1,5 +1,7 @@
 # How to run the completed project
 
+<!-- markdownlint-disable MD060 -->
+
 ## Prerequisites
 
 To run the completed project in this folder, you need the following:
@@ -81,5 +83,5 @@ In your command-line interface (CLI), navigate to the project directory and run 
 
 ```Shell
 npm install
-npx ts-node index.ts
+npm start
 ```
