@@ -11,7 +11,7 @@ import header from '@tony.ganchev/eslint-plugin-header';
 
 export default defineConfig(
   {
-    ignores: ['**/dist'],
+    ignores: ['**/build'],
   },
   tseslint.configs.recommended,
   eslintPrettierRecommended,
