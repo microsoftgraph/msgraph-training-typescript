@@ -12,7 +12,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/user-auth/graphtutorial/build/index.js",
+      "program": "${workspaceFolder}/user-auth/graphtutorial/index.ts",
+      "runtimeExecutable": "tsx",
       "cwd": "${workspaceFolder}/user-auth/graphtutorial",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -31,7 +32,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/app-auth/graphapponlytutorial/build/index.js",
+      "program": "${workspaceFolder}/app-auth/graphapponlytutorial/index.ts",
+      "runtimeExecutable": "tsx",
       "cwd": "${workspaceFolder}/app-auth/graphapponlytutorial",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
