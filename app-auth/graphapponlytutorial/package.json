@@ -16,7 +16,7 @@
     "@microsoft/microsoft-graph-types": "^2.43.1",
     "@tony.ganchev/eslint-plugin-header": "^3.3.4",
     "@types/isomorphic-fetch": "^0.0.39",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.5.2",
     "@types/readline-sync": "^1.4.8",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",
