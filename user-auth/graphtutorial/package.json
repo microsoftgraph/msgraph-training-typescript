@@ -18,7 +18,7 @@
     "@types/isomorphic-fetch": "^0.0.39",
     "@types/node": "^25.5.0",
     "@types/readline-sync": "^1.4.8",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "prettier": "^3.8.1",
