@@ -2,6 +2,7 @@
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# cSpell:ignore cooldown
 
 version: 2
 updates:
@@ -9,11 +10,11 @@ updates:
     directory: /user-auth/graphtutorial # Location of package manifests
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
   - package-ecosystem: npm
     directory: /app-auth/graphapponlytutorial # Location of package manifests
     schedule:
       interval: weekly
-registries:
-  microsoft-proxy:
-    type: npm-registry
-    url: https://packagefeedproxy.microsoft.io/npm/
+    cooldown:
+      default-days: 7
