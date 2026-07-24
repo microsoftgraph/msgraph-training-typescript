@@ -5,11 +5,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/user-auth/graphtutorial" # Location of package manifests
+  - package-ecosystem: npm
+    directory: /user-auth/graphtutorial # Location of package manifests
     schedule:
-      interval: "weekly"
-  - package-ecosystem: "npm"
-    directory: "/app-auth/graphapponlytutorial" # Location of package manifests
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /app-auth/graphapponlytutorial # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: weekly
+registries:
+  microsoft-proxy:
+    type: npm-registry
+    url: https://packagefeedproxy.microsoft.io/npm/
